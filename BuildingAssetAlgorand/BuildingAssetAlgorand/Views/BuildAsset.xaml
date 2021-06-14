@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuildingAssetAlgorand.Views.BuildAsset">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Build an Asset" FontSize="Title"/>
+                <Label Text="Learn how to build an Asset on the Algorand Network" FontSize="16" Padding="0,0,0,0"/>
+                <Entry x:Name="CreatorMnemonicKey" ReturnType="Next" Placeholder="Enter Asset Creator PassPhrase Key" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+                <Entry x:Name="ManagerMnemonicKey" ReturnType="Next" Placeholder="Enter Asset Manager PassPhrase Key" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+                <Entry x:Name="AssetName" ReturnType="Next" Placeholder="Enter Asset Name" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+                <Entry x:Name="UnitName" ReturnType="Next" Placeholder="Enter Unit Name" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+                <Entry x:Name="Url" ReturnType="Next" Placeholder="Enter Url" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+                <Button Margin="0,10,0,0" Text="Create Asset"
+                        Clicked="createAsset"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+
+                <Entry x:Name="AssetId" ReturnType="Next" IsEnabled="False" Placeholder="AssetId" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" />
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+</ContentPage>
+    
